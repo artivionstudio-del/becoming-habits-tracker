@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-becoming-black: #050505;
+  --color-becoming-dark: #0a0a0a;
+  --color-becoming-cream: #f5f5f0;
+  --color-becoming-teal: #00f0ff;
+  --color-becoming-teal-dark: #008a99;
+  --brand-turquoise: var(--color-becoming-teal);
+}
+
+@layer base {
+  body {
+    @apply bg-becoming-black text-becoming-cream font-sans antialiased selection:bg-becoming-teal selection:text-becoming-black;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+  }
+  
+  .glow-box {
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.15);
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 8px rgba(0, 240, 255, 0.4), 0 0 16px rgba(0, 240, 255, 0.2); 
+    }
+    50% { 
+      box-shadow: 0 0 16px rgba(0, 240, 255, 0.8), 0 0 24px rgba(0, 240, 255, 0.4); 
+    }
+  }
+
+  .logo-glow {
+    animation: pulse-glow 3s infinite ease-in-out;
+    border: 1px solid rgba(0, 240, 255, 0.3);
+  }
+
+  .group:hover .logo-glow {
+    animation-duration: 1s;
+    border-color: rgba(0, 240, 255, 0.8);
+  }
+
+  @keyframes chaos-pulse {
+    0%, 100% { 
+      filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.2));
+    }
+    50% { 
+      filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.5));
+    }
+  }
+
+  .chaos-glow {
+    animation: chaos-pulse 4s infinite ease-in-out;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
