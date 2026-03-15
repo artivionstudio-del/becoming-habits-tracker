@@ -100,13 +100,14 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
-              className="relative aspect-square rounded-3xl overflow-hidden border border-white/10 glass p-2"
+              className="relative rounded-[24px] overflow-hidden border border-white/10 glass p-2 flex items-center"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-becoming-teal/20 to-transparent opacity-50" />
               <img 
-                src="https://picsum.photos/seed/story/800/800?blur=2" 
+                src="https://i.postimg.cc/Y0DLdhcF/unnamed-(98).jpg" 
                 alt="Brand Story" 
-                className="w-full h-full object-cover rounded-2xl opacity-80 mix-blend-luminosity"
+                className="w-full h-full opacity-80 mix-blend-luminosity"
+                style={{ borderRadius: '20px', aspectRatio: '4/3', objectFit: 'cover' }}
                 referrerPolicy="no-referrer"
               />
             </motion.div>

@@ -34,7 +34,7 @@ const reviews = [
   {
     id: 5,
     title: "Finally, something that works.",
-    text: "I've tried dozens of apps and planners, but this Notion system is the only one that stuck. It's flexible enough to adapt to my chaotic schedule.",
+    text: "I've tried dozens of apps and planners, but this Google Sheets system is the only one that stuck. It's flexible enough to adapt to my chaotic schedule.",
     name: "Marcus T.",
     date: "2 months ago"
   },

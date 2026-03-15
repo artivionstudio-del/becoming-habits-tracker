@@ -33,15 +33,15 @@ export default function Support() {
   const faqs = [
     {
       question: 'How do I receive my tracker after purchase?',
-      answer: 'Instant email delivery. As soon as your payment is confirmed, you will receive an email with a secure download link to access your files immediately.'
+      answer: 'Immediate Deployment. Upon successful payment, you will be instantly redirected to your secure access page to download the BECOMING Deployment Protocol and unlock your Google Sheets trackers. A secondary confirmation email will also be dispatched to your inbox to ensure you have permanent, lifetime access to your system.'
     },
     {
       question: 'Is the tracker compatible with my device?',
-      answer: 'Yes, it works seamlessly on Notion, PDF annotation apps (like GoodNotes or Notability), and Google Sheets, depending on the specific version you choose to use.'
+      answer: 'Yes. The BECOMING system is engineered exclusively for Google Sheets to ensure universal compatibility and seamless synchronization. You can deploy and manage your command center on any device—PC, Mac, tablet, or smartphone—simply by using a standard, free Google account or the Google Sheets app. No additional software or paid subscriptions are required.'
     },
     {
       question: 'Can I get help setting up my habits?',
-      answer: 'Absolutely. Please refer to the included Free Ebook, "The Psychology of Discipline," which provides a step-by-step framework for choosing and setting up the right habits for your goals.'
+      answer: 'Absolutely. Your included 12-page Deployment Protocol provides the exact technical framework to set up and execute your trackers. For continuous, high-level strategies on discipline and personal development, we share free daily content on our official Instagram and TikTok channels. For those seeking personalized guidance and advanced execution tactics, dedicated, full-access support is exclusively reserved for members of our VIP Telegram network.'
     }
   ];
 

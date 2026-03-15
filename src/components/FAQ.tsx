@@ -12,19 +12,15 @@ export default function FAQ() {
     },
     {
       question: "What platform is the tracker built on?",
-      answer: "The tracker is a digital product designed to work seamlessly with Notion. You'll receive a template link immediately after purchase that you can duplicate into your own workspace."
+      answer: "This tracker is a premium digital product designed to work seamlessly with Google Sheets. Immediately after purchase, you'll receive a direct link to copy the template straight into your own Google Drive."
     },
     {
-      question: "Do I need a paid Notion account?",
-      answer: "No. BECOMING works perfectly on Notion's free plan. You don't need to pay for any additional software to use this system."
+      question: "Are there any hidden software costs?",
+      answer: "Absolutely not. The BECOMING system is engineered to run flawlessly on a standard, free Google account. Zero recurring fees, zero extra software required. Just duplicate and execute."
     },
     {
-      question: "How do I access the free ebook?",
-      answer: "The 50-page ebook 'The Psychology of Discipline' is included as a PDF download in your purchase confirmation email alongside the tracker link."
-    },
-    {
-      question: "Is there a refund policy?",
-      answer: "Yes. We offer a 14-day money-back guarantee. If you don't find value in the system, simply email our support team and we'll refund your purchase, no questions asked."
+      question: "How do I access the BECOMING system after purchase?",
+      answer: "Upon successful payment, you will be instantly redirected to a secure access page to download your 12-page Deployment Protocol. This streamlined guide contains your exact setup instructions and the embedded links to unlock your Google Sheets trackers. A secondary confirmation email will also be dispatched to your inbox to ensure you have permanent, lifetime access."
     }
   ];
 

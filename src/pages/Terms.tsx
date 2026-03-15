@@ -26,7 +26,7 @@ export default function Terms() {
     {
       id: '02',
       title: 'Digital Products',
-      content: 'The Habits + Tasks Tracker and the accompanying Psychology of Discipline Ebook are instant digital downloads. Access is granted immediately after your payment is successfully processed. Please ensure you have the appropriate software to open and utilize these files.'
+      content: 'The BECOMING Habits + Tasks Tracker and its accompanying 12-page Deployment Protocol are delivered as instant digital downloads. Access to the master Google Sheets templates is granted immediately upon successful payment via embedded links within your PDF guide. Please ensure you have a standard, free Google account to duplicate and execute these systems.'
     },
     {
       id: '03',
@@ -73,7 +73,7 @@ export default function Terms() {
         </div>
 
         {/* Content Layout */}
-        <div className="space-y-24">
+        <div className="space-y-4">
           {sections.map((section, index) => (
             <motion.div 
               key={section.id}
@@ -81,17 +81,19 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="relative pl-16 md:pl-24 group"
+              className="numbered-section group"
             >
-              <span className="absolute left-0 top-[-8px] text-5xl md:text-6xl font-display font-bold text-becoming-teal/20 select-none transition-colors duration-500 group-hover:text-becoming-teal/40">
+              <div className="number">
                 {section.id}.
-              </span>
-              <h2 className="text-2xl md:text-3xl font-display font-bold mb-6 text-white drop-shadow-[0_0_12px_rgba(0,240,255,0.15)] group-hover:drop-shadow-[0_0_16px_rgba(0,240,255,0.4)] transition-all duration-500">
-                {section.title}
-              </h2>
-              <p className="text-lg md:text-xl text-white/70 font-light leading-[1.8] md:leading-[2]">
-                {section.content}
-              </p>
+              </div>
+              <div className="content">
+                <h2 className="text-2xl md:text-3xl font-display font-bold mb-6 text-white drop-shadow-[0_0_12px_rgba(0,240,255,0.15)] group-hover:drop-shadow-[0_0_16px_rgba(0,240,255,0.4)] transition-all duration-500">
+                  {section.title}
+                </h2>
+                <p className="text-lg md:text-xl text-white/70 font-light leading-[1.8] md:leading-[2]">
+                  {section.content}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

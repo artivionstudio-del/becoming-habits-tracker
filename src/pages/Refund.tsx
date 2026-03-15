@@ -7,22 +7,22 @@ export default function Refund() {
     {
       id: '01',
       title: 'Digital Nature of Product',
-      content: 'The BECOMING Habits + Tasks Tracker and the accompanying Psychology of Discipline Ebook are digital products delivered instantly upon purchase. Because of this immediate access and the inability to "return" a digital file, we generally do not offer traditional refunds or returns.'
+      content: "The BECOMING Habits + Tasks Tracker and its accompanying Deployment Protocol are digital assets delivered instantly. Because you receive immediate, full access to our proprietary framework, all sales are final. We do not offer traditional returns or refunds for a 'change of mind'."
     },
     {
       id: '02',
-      title: 'Satisfaction Guarantee',
-      content: 'Our primary goal is your personal growth and satisfaction. If you encounter any technical issues, such as a corrupted file or difficulty accessing the tracker, we are committed to providing an immediate replacement or dedicated technical support to resolve the issue.'
+      title: 'The Technical Integrity Guarantee',
+      content: "Our systems are rigorously tested for peak performance. However, if you encounter a verified, reproducible technical bug that prevents the tracker from functioning as intended, and our support team is unable to resolve the issue, you are entitled to a full refund. We stand behind our code."
     },
     {
       id: '03',
       title: 'Refund Eligibility',
-      content: 'Refund requests will only be considered under exceptional circumstances, such as a verifiable technical failure that prevents access to the product, and must be made within 14 days of the original purchase date. Change of mind or lack of use does not qualify for a refund.'
+      content: "Refunds are strictly limited to unresolvable, core system failures—such as irreparable mathematical or logic breakdowns within the tracker. Minor visual anomalies inherent to the Google Sheets platform itself (e.g., temporary chart shifting or rendering delays) do not constitute a functional failure and are not eligible for a refund. Lack of use, lack of commitment, or simple preference changes are also strictly excluded. To be eligible, you must actively cooperate with our support team to attempt a fix first."
     },
     {
       id: '04',
       title: 'How to Request Support',
-      content: 'If you need assistance or believe you qualify for a refund under our eligibility terms, please contact our support team directly at becoming.213@gmail.com. For priority assistance, you may also reach out to us via our official WhatsApp channel.'
+      content: "If you experience a critical error, contact our dedicated technical team immediately at becoming.213@gmail.com. Please include a clear description of the bug and screenshots. Our team will deploy a fix or initiate the refund protocol if the issue is proven unresolvable."
     }
   ];
 
@@ -72,7 +72,7 @@ export default function Refund() {
         </div>
 
         {/* Content Layout */}
-        <div className="space-y-24 mb-32">
+        <div className="space-y-4 mb-32">
           {sections.map((section, index) => (
             <motion.div 
               key={section.id}
@@ -80,17 +80,19 @@ export default function Refund() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="relative pl-16 md:pl-24 group"
+              className="numbered-section group"
             >
-              <span className="absolute left-0 top-[-8px] text-5xl md:text-6xl font-display font-bold text-becoming-teal/20 select-none transition-colors duration-500 group-hover:text-becoming-teal/40">
+              <div className="number">
                 {section.id}.
-              </span>
-              <h2 className="text-2xl md:text-3xl font-display font-bold mb-6 text-white drop-shadow-[0_0_12px_rgba(0,240,255,0.15)] group-hover:drop-shadow-[0_0_16px_rgba(0,240,255,0.4)] transition-all duration-500">
-                {section.title}
-              </h2>
-              <p className="text-lg md:text-xl text-white/70 font-light leading-[1.8] md:leading-[2]">
-                {section.content}
-              </p>
+              </div>
+              <div className="content">
+                <h2 className="text-2xl md:text-3xl font-display font-bold mb-6 text-white drop-shadow-[0_0_12px_rgba(0,240,255,0.15)] group-hover:drop-shadow-[0_0_16px_rgba(0,240,255,0.4)] transition-all duration-500">
+                  {section.title}
+                </h2>
+                <p className="text-lg md:text-xl text-white/70 font-light leading-[1.8] md:leading-[2]">
+                  {section.content}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

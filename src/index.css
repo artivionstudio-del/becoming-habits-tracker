@@ -14,12 +14,70 @@
 }
 
 @layer base {
-  body {
-    @apply bg-becoming-black text-becoming-cream font-sans antialiased selection:bg-becoming-teal selection:text-becoming-black;
+  html {
+    font-size: 16px;
+    @apply scroll-smooth;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight;
+  body {
+    @apply bg-becoming-black text-becoming-cream font-sans antialiased selection:bg-becoming-teal selection:text-becoming-black;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    @apply font-display font-bold tracking-tighter leading-[0.9] mb-6;
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 8vw, 4rem);
+    @apply font-display font-bold tracking-tighter leading-[1.1] mb-6;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    @apply font-display font-bold tracking-tight mb-4;
+  }
+  
+  p {
+    font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
+    @apply text-white/60 font-light leading-relaxed mb-6;
+  }
+
+  ul, ol {
+    @apply mb-6;
+  }
+
+  li {
+    font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
+    @apply text-white/70 font-light leading-relaxed;
+  }
+}
+
+@layer components {
+  .container-fluid {
+    @apply max-w-7xl mx-auto px-6 md:px-12 lg:px-16;
+  }
+
+  .numbered-section {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    @apply w-full mb-24;
+  }
+
+  .numbered-section .number {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    @apply font-display font-bold text-becoming-teal/20 leading-none select-none transition-colors duration-500 block;
+  }
+
+  .numbered-section:hover .number {
+    @apply text-becoming-teal/40;
+  }
+
+  .numbered-section .content {
+    @apply flex-1;
   }
 }
 
@@ -67,8 +125,4 @@
   .chaos-glow {
     animation: chaos-pulse 4s infinite ease-in-out;
   }
-}
-
-html {
-  scroll-behavior: smooth;
 }

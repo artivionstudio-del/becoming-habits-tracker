@@ -100,7 +100,7 @@ export default function Privacy() {
         </div>
 
         {/* Content Layout */}
-        <div className="space-y-24">
+        <div className="space-y-4">
           {sections.map((section, index) => (
             <motion.div 
               key={section.id}
@@ -108,22 +108,24 @@ export default function Privacy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="relative pl-16 md:pl-24 group"
+              className="numbered-section group"
             >
-              <span className="absolute left-0 top-[-8px] text-5xl md:text-6xl font-display font-bold text-becoming-teal/20 select-none transition-colors duration-500 group-hover:text-becoming-teal/40">
+              <div className="number">
                 {section.id}.
-              </span>
-              <h2 className="text-2xl md:text-3xl font-display font-bold mb-6 text-white drop-shadow-[0_0_12px_rgba(0,240,255,0.15)] group-hover:drop-shadow-[0_0_16px_rgba(0,240,255,0.4)] transition-all duration-500">
-                {section.title}
-              </h2>
-              <ul className="space-y-4">
-                {section.content.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-lg text-white/70 font-light leading-[1.8]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-becoming-teal/50 mt-2.5 shrink-0 group-hover:bg-becoming-teal transition-colors duration-500 shadow-[0_0_5px_rgba(0,240,255,0.3)] group-hover:shadow-[0_0_8px_rgba(0,240,255,0.6)]" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              </div>
+              <div className="content">
+                <h2 className="text-2xl md:text-3xl font-display font-bold mb-6 text-white drop-shadow-[0_0_12px_rgba(0,240,255,0.15)] group-hover:drop-shadow-[0_0_16px_rgba(0,240,255,0.4)] transition-all duration-500">
+                  {section.title}
+                </h2>
+                <ul className="space-y-4">
+                  {section.content.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-lg text-white/70 font-light leading-[1.8]">
+                      <span className="w-1.5 h-1.5 rounded-full bg-becoming-teal/50 mt-2.5 shrink-0 group-hover:bg-becoming-teal transition-colors duration-500 shadow-[0_0_5px_rgba(0,240,255,0.3)] group-hover:shadow-[0_0_8px_rgba(0,240,255,0.6)]" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           ))}
         </div>

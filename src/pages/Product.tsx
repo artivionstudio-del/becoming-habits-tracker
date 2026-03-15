@@ -15,7 +15,8 @@ const purchaseOptions = [
     id: 'basic', 
     title: 'BASIC ACCESS', 
     price: 3.25, 
-    features: ['Habits + Tasks Tracker', 'FREE Ebook included']
+    features: ['Habits + Tasks Tracker', 'FREE Ebook included'],
+    link: 'https://www.paypal.com/ncp/payment/FSJ8KLLYVWY3U'
   },
   { 
     id: 'momentum', 
@@ -23,13 +24,15 @@ const purchaseOptions = [
     price: 7.99, 
     features: ['Habits + Tasks Tracker', 'FREE Ebook', '1 Year of Dedicated Assistance', 'Exclusive Gifts'], 
     popular: true,
-    badge: 'MOST POPULAR'
+    badge: 'MOST POPULAR',
+    link: 'https://www.paypal.com/ncp/payment/G2LY6NPH22XWG'
   },
   { 
     id: 'legacy', 
     title: 'THE BECOMING LEGACY (VIP)', 
     price: 11.39, 
-    features: ['Habits + Tasks Tracker', 'FREE Ebook', '5 Year Priority Assistance', 'All Future Products & Guides', 'Exclusive Gifts', 'Access to our Private Community Group']
+    features: ['Habits + Tasks Tracker', 'FREE Ebook', '5 Year Priority Assistance', 'All Future Products & Guides', 'Exclusive Gifts', 'Access to our Private Community Group'],
+    link: 'https://www.paypal.com/ncp/payment/L7J4W72YN9K96'
   }
 ];
 
@@ -67,14 +70,6 @@ export default function Product() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
   const [isZoomed, setIsZoomed] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    if ((window as any).paypal) {
-      (window as any).paypal.HostedButtons({
-        hostedButtonId: "G2LY6NPH22XWG",
-      }).render("#paypal-container-G2LY6NPH22XWG");
-    }
-  }, []);
 
   const nextImage = () => setCurrentImage((prev) => (prev + 1) % images.length);
   const prevImage = () => setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
@@ -203,12 +198,10 @@ export default function Product() {
                 <button
                   key={option.id}
                   onClick={() => setSelectedOption(option.id)}
-                  className={`w-full text-left p-4 md:p-5 rounded-2xl border transition-all duration-300 relative overflow-hidden ${
+                  className={`w-full text-left p-4 md:p-5 rounded-2xl border transition-all duration-500 relative overflow-hidden group ${
                     selectedOption === option.id 
-                      ? 'border-becoming-teal bg-becoming-teal/10 shadow-[0_0_30px_rgba(0,240,255,0.15)] scale-[1.02]' 
-                      : option.popular
-                        ? 'border-becoming-teal/40 bg-white/5 hover:border-becoming-teal/60 hover:shadow-[0_0_20px_rgba(0,240,255,0.1)]'
-                        : 'border-white/10 bg-white/5 hover:border-white/30'
+                      ? 'border-becoming-teal bg-becoming-teal/15 shadow-[0_0_40px_rgba(0,240,255,0.25)] scale-[1.03] z-10' 
+                      : 'border-white/10 bg-white/5 opacity-60 hover:opacity-100 hover:border-white/30'
                   }`}
                 >
                   {option.popular && (
@@ -219,14 +212,14 @@ export default function Product() {
                   <div className="flex justify-between items-start mb-3 md:mb-4">
                     <span className={`font-semibold tracking-wide pr-2 ${option.popular ? 'text-base md:text-lg text-white' : 'text-sm md:text-base text-white'} ${option.id === 'legacy' ? 'text-becoming-teal' : ''}`}>{option.title}</span>
                     <div className="flex flex-col items-end shrink-0 ml-2 md:ml-4">
-                      <span className={`font-display font-bold ${option.popular ? 'text-lg md:text-xl text-becoming-teal' : 'text-base md:text-lg text-white'}`}>€{option.price}</span>
+                      <span className={`font-display font-bold ${selectedOption === option.id ? 'text-lg md:text-xl text-becoming-teal' : 'text-base md:text-lg text-white'}`}>€{option.price}</span>
                     </div>
                   </div>
                   <ul className="space-y-1.5 md:space-y-2">
                     {option.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 md:w-4 md:h-4 text-becoming-teal shrink-0 mt-0.5" />
-                        <span className={`text-xs md:text-sm ${option.popular ? 'text-white/80' : 'text-white/60'} leading-relaxed`}>{feature}</span>
+                        <CheckCircle2 className={`w-3.5 h-3.5 md:w-4 md:h-4 shrink-0 mt-0.5 transition-colors ${selectedOption === option.id ? 'text-becoming-teal' : 'text-white/40'}`} />
+                        <span className={`text-xs md:text-sm ${selectedOption === option.id ? 'text-white/90' : 'text-white/50'} leading-relaxed`}>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -234,17 +227,20 @@ export default function Product() {
               ))}
             </div>
 
-            {/* Checkout Section */}
-            <div className="mb-12 py-8 md:py-12 border-t border-white/10 w-full">
-              <div className="flex flex-col items-center text-center gap-6 md:gap-8 w-full min-w-full md:min-w-[300px]">
-                <h2 className="text-2xl md:text-4xl font-display font-bold text-white text-center w-full">
-                  Ready to master your goals.
-                </h2>
-                <div 
-                  id="paypal-container-G2LY6NPH22XWG" 
-                  style={{ width: '100%', minWidth: '100%', maxWidth: '500px', margin: '0 auto' }}
-                ></div>
-              </div>
+            {/* Master Checkout Button */}
+            <div className="mb-12 pt-4 w-full">
+              <a
+                href={purchaseOptions.find(o => o.id === selectedOption)?.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex items-center justify-center gap-3 px-12 py-6 bg-becoming-black text-white border border-becoming-teal/50 rounded-[50px] font-bold text-xl uppercase overflow-hidden transition-all hover:scale-105 shadow-[0_0_30px_rgba(0,240,255,0.3)] hover:shadow-[0_0_60px_rgba(0,240,255,0.6)] w-full"
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  Get Access Now <Zap className="w-6 h-6 text-becoming-teal group-hover:scale-110 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-becoming-teal/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+              </a>
+              <p className="text-center mt-4 text-xs text-white/40 font-medium uppercase tracking-widest">Secure Checkout via PayPal</p>
             </div>
 
             {/* Trust Badges */}

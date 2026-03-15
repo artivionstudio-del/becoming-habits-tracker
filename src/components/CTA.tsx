@@ -38,7 +38,7 @@ export default function CTA() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-white/60 font-light leading-relaxed mb-12 max-w-2xl mx-auto"
             >
-              Unlock your ultimate performance system. Get instant access to the elite Habits + Tasks Tracker and the exclusive 50-page 'Psychology of Discipline' playbook.
+              Unlock your ultimate performance system. Get instant access to the elite BECOMING Habits + Tasks Tracker and your concise 12-page Deployment Protocol to initialize your command center immediately.
             </motion.p>
             
             <motion.div
@@ -68,10 +68,10 @@ export default function CTA() {
                   <CheckCircle2 className="w-4 h-4 text-becoming-teal" /> Lifetime Access
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-becoming-teal" /> Free Ebook Included
+                  <CheckCircle2 className="w-4 h-4 text-becoming-teal" /> 12-Page Setup Protocol
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-becoming-teal" /> Plan-Specific Guarantee
+                  <CheckCircle2 className="w-4 h-4 text-becoming-teal" /> Technical Integrity Guarantee
                 </div>
               </div>
             </motion.div>

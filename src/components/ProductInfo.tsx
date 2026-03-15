@@ -10,10 +10,10 @@ const options = [
 ];
 
 const accordions = [
-  { title: 'Product Details', content: 'A comprehensive digital system built for Notion. Includes daily, weekly, and monthly tracking modules, automated progress bars, and a clean, distraction-free interface.' },
-  { title: 'How It Works', content: 'After purchase, you will receive an instant download link. Duplicate the template into your own Notion workspace and start customizing it immediately. No coding required.' },
+  { title: 'Product Details', content: 'A comprehensive digital system built for Google Sheets. Includes daily, weekly, and monthly tracking modules, automated progress bars, and a clean, distraction-free interface.' },
+  { title: 'How It Works', content: 'After purchase, you will receive an instant download link. Duplicate the template into your own Google Drive and start customizing it immediately. No coding required.' },
   { title: 'Benefits', content: 'Stop relying on willpower. Build visual streaks, organize your chaotic mind, prioritize deep work, and finally achieve the goals you set at the beginning of the year.' },
-  { title: 'FAQ', content: 'Works on free Notion plan. One-time payment, lifetime access. 14-day money-back guarantee if you are not completely satisfied.' },
+  { title: 'FAQ', content: 'Works on any free Google account. One-time payment, lifetime access. 14-day money-back guarantee if you are not completely satisfied.' },
 ];
 
 export default function ProductInfo() {

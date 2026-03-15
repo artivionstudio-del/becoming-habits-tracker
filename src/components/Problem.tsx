@@ -70,8 +70,8 @@ export default function Problem() {
             <div className="absolute inset-0 bg-becoming-teal/10 blur-[100px] rounded-full" />
             <div className="relative w-full aspect-square rounded-[20px] overflow-hidden border border-white/10 shadow-2xl chaos-glow">
               <img 
-                src="https://i.postimg.cc/xTFmCbXK/unnamed-(89).jpg" 
-                alt="Psychological Chaos" 
+                src="https://i.postimg.cc/1zrpk3Pz/unnamed-(89).jpg" 
+                alt="Habits Tracker in Dubai" 
                 className="w-full h-full object-cover object-center"
                 referrerPolicy="no-referrer"
               />
