@@ -76,10 +76,10 @@ export default function Hero() {
         >
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tighter mb-6">
-              Devenir l'Architecte de <span className="text-becoming-teal glow-text">votre Journée.</span>
+              Become the Architect of <span className="text-becoming-teal glow-text">Your Day.</span>
             </h2>
             <p className="text-lg md:text-xl text-white/80 font-medium leading-relaxed md:leading-relaxed">
-              Le chaos de la vie moderne exige de la structure. BECOMING est votre centre de commande personnel, conçu pour bâtir des habitudes inébranlables et accomplir vos tâches les plus importantes.
+              The chaos of modern life demands absolute structure. BECOMING operates as your personal command center—engineered to forge unbreakable habits and execute your highest-leverage tasks.
             </p>
           </div>
           <div className="relative flex justify-center w-full">
